@@ -8,6 +8,7 @@
   --color-vintage-red: #f53855;
   --color-darker-red: #f53838;
   --color-white: white;
+  --color-very-light-grey: #dddddd;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
@@ -239,6 +240,7 @@ body {
 
 .section__heading2 {
   font-size: var(--font-size-35);
+  font-weight: var(--font-weight-medium);
   line-height: 1.5;
   color: var(--color-dark-blue);
 }
@@ -255,3 +257,86 @@ body {
   padding-left: 24px;
 }
 // FEATURES SECTION END
+
+// PRICING SECTION
+.section__pricing {
+  flex-direction: column;
+  gap: calc(var(--padding) * 2);
+}
+
+.section__pricing .section__content {
+  text-align: center;
+}
+.section__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--padding) * 2);
+  width: 80%;
+}
+
+.section__plan {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--padding));
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  border: 0.2rem solid var(--color-very-light-grey);
+  border-radius: 1rem;
+}
+
+.plan__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--padding) * 2);
+}
+
+.plan__heading {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-medium);
+}
+
+.plan__icon {
+  max-width: 100%;
+  width: 16rem;
+}
+
+.plan__feature {
+  font-size: var(--font-size-14);
+  color: var(--color-light-grey);
+  margin-bottom: var(--padding);
+  background-image: url("../assets/check-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  padding-left: 24px;
+}
+
+.plan__pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding);
+  margin-top: auto;
+}
+
+.plan__price {
+  font-size: var(--font-size-25);
+  color: var(--color-light-grey);
+}
+
+.plan__price span {
+  color: black;
+  font-weight: var(--font-weight-medium);
+}
+
+.plan__button {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-vintage-red);
+  padding: calc(var(--padding) / 2) calc(var(--padding) * 3);
+  border: 0.2rem solid var(--color-vintage-red);
+  border-radius: 2rem;
+}
+// PRICING SECTION END
