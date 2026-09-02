@@ -1,0 +1,126 @@
+:root {
+  --container-width: 150rem;
+  --gutter: 2rem;
+  --padding: 2rem;
+  --font-family-rubik: "Rubik", sans-serif;
+  --color-light-grey: #4f5665;
+  --color-dark-blue: #0b132a;
+  --color-vintage-red: #f53855;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-size-70: 7rem;
+  --font-size-65: 6.5rem;
+  --font-size-40: 4rem;
+  --font-size-38: 3.8rem;
+  --font-size-24: 2.4rem;
+  --font-size-22: 2.2rem;
+  --font-size-20: 2rem;
+  --font-size-18: 1.8rem;
+  --font-size-16: 1.6rem;
+  --transition-timing: 0.3s;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: inherit;
+}
+
+*,
+*::before,
+* ::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-family-rubik);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--padding) * 4);
+  margin: 0 auto;
+  max-width: calc(var(--container-width) + var(--gutter) * 2);
+  padding-inline: var(--gutter);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: calc(var(--padding) * 2);
+}
+
+.header__logocontent {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__logo {
+  max-width: 100%;
+  width: 3.6rem;
+}
+
+.header__heading {
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-medium);
+}
+
+.header__links {
+  display: flex;
+  gap: calc(var(--padding) * 2);
+  font-size: var(--font-size-16);
+  color: var(--color-light-grey);
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__account {
+  display: flex;
+  align-items: center;
+  gap: var(--padding);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-medium);
+}
+
+.header__signin {
+  text-decoration: none;
+  color: var(--color-dark-blue);
+}
+
+.header__signup {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  color: var(--color-vintage-red);
+  border: 0.1rem solid var(--color-vintage-red);
+  padding: calc(var(--padding) / 2) calc(var(--padding) * 2);
+  border-radius: 2rem;
+}/*# sourceMappingURL=style.css.map */
