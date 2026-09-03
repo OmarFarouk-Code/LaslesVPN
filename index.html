@@ -24,18 +24,18 @@
           <div class="header__heading">Lasles<strong>VPN</strong></div>
         </div>
         <nav class="header__links">
-          <a class="header__link" href="#">About</a>
-          <a class="header__link" href="#">Features</a>
-          <a class="header__link" href="#">Pricing</a>
-          <a class="header__link" href="#">Testimonials</a>
-          <a class="header__link" href="#">Help</a>
+          <a class="header__link" href="#about">About</a>
+          <a class="header__link" href="#features">Features</a>
+          <a class="header__link" href="#pricing">Pricing</a>
+          <a class="header__link" href="#testimonials">Testimonials</a>
+          <a class="header__link" href="#help">Help</a>
         </nav>
         <div class="header__account">
           <a class="header__signin" href="#">Sign In</a>
           <button class="header__signup" href="#">Sign Up</button>
         </div>
       </header>
-      <section class="section section__hero">
+      <section class="section section__hero" id="about">
         <div class="section__content">
           <h1 class="section__heading">
             Want anything to be easy with <span>LaslesVPN.</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </section>
-      <section class="section section__features">
+      <section class="section section__features" id="features">
         <div class="section__display">
           <img
             class="section__img"
@@ -106,7 +106,7 @@
           </ul>
         </div>
       </section>
-      <section class="section section__pricing">
+      <section class="section section__pricing" id="pricing">
         <div class="section__content">
           <h2 class="section__heading2">Choose Your Plan</h2>
           <p class="section__description">
@@ -215,7 +215,7 @@
           </div>
         </div>
       </section>
-      <section class="section section__testimonials">
+      <section class="section section__testimonials" id="testimonials">
         <div class="section__content">
           <h2 class="section__heading2">
             Trusted by Thousands of <br />Happy Customer
@@ -226,7 +226,7 @@
           </p>
         </div>
 
-        <div class="testimonial__cards">
+        <div class="testimonial__cards" id="cards-container">
           <div class="testimonial__card">
             <div class="card__header">
               <img
@@ -338,21 +338,21 @@
           <div class="slider__indictators">
             <span class="dot active"></span>
             <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
           </div>
 
           <div class="navigation__arrows">
-            <button class="navigation__arrow">
+            <button class="navigation__arrow" id="prev-btn">
               <img class="arrow-img" src="assets/arrow-backward.svg" />
             </button>
-            <button class="navigation__arrow navigation__arrow-red">
+            <button
+              class="navigation__arrow navigation__arrow-red"
+              id="next-btn"
+            >
               <img class="arrow-img" src="assets/arrow-forward.svg" />
             </button>
           </div>
         </div>
       </section>
-
       <section class="section section__subscribe">
         <div class="section__content">
           <h2 class="section__heading2">
@@ -368,7 +368,7 @@
         </div>
       </section>
     </article>
-    <footer class="footer">
+    <footer class="footer" id="help">
       <div class="footer__content">
         <div class="header__logocontent">
           <img
@@ -441,5 +441,65 @@
         </div>
       </div>
     </footer>
+    <script>
+      // 1. Grab all necessary elements
+      const cardsContainer = document.getElementById("cards-container");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+      const dots = document.querySelectorAll(".dot"); // Grabs all 4 dots
+
+      // 2. Helper function to calculate the exact width of a card + gap
+      const getScrollAmount = () => {
+        const singleCard = document.querySelector(".testimonial__card");
+        const containerStyle = window.getComputedStyle(cardsContainer);
+        const gap = parseFloat(containerStyle.getPropertyValue("gap")) || 0;
+        return singleCard.offsetWidth + gap;
+      };
+
+      // 3. Arrow Navigation Logic
+      const scrollCards = (direction) => {
+        const scrollAmount = getScrollAmount();
+        if (direction === "next") {
+          cardsContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        } else if (direction === "prev") {
+          cardsContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        }
+      };
+
+      nextBtn.addEventListener("click", () => scrollCards("next"));
+      prevBtn.addEventListener("click", () => scrollCards("prev"));
+
+      // 4. Update the active dot when the container scrolls
+      cardsContainer.addEventListener("scroll", () => {
+        const scrollAmount = getScrollAmount();
+
+        // Divide current scroll position by card width to get the active index
+        // Math.round ensures it snaps to the nearest whole number (0, 1, 2, or 3)
+        const currentIndex = Math.round(
+          cardsContainer.scrollLeft / scrollAmount,
+        );
+
+        // Remove the 'active' class from all dots
+        dots.forEach((dot) => dot.classList.remove("active"));
+
+        // Add the 'active' class to the correct dot
+        if (dots[currentIndex]) {
+          dots[currentIndex].classList.add("active");
+        }
+      });
+
+      // 5. BONUS: Make the dots clickable!
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          const scrollAmount = getScrollAmount();
+
+          // Scroll to the exact position of the clicked dot's index
+          cardsContainer.scrollTo({
+            left: scrollAmount * index,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -59,6 +59,8 @@ ol {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
 }
 
 body {
@@ -112,6 +114,13 @@ body {
 
 .header__link {
   text-decoration: none;
+  transition: all var(--transition-timing) ease-in-out;
+}
+
+.header__link:hover,
+.header__link:active {
+  scale: 1.2;
+  color: var(--color-vintage-red);
 }
 
 .header__account {
@@ -180,6 +189,11 @@ body {
   border-radius: 1rem;
   box-shadow: 0rem 0.5rem 1.5rem var(--color-darker-red);
   margin-top: 4rem;
+  transition: all var(--transition-timing) ease-in-out;
+}
+
+.section__button:hover {
+  scale: 1.1;
 }
 
 .section__display {
@@ -275,6 +289,12 @@ body {
   padding: 4rem;
   border: 0.2rem solid var(--color-very-light-grey);
   border-radius: 1rem;
+  transition: all var(--transition-timing) ease-in-out;
+}
+
+.section__plan:hover {
+  scale: 1.1;
+  border: 0.2rem solid var(--color-vintage-red);
 }
 
 .plan__content {
@@ -330,6 +350,13 @@ body {
   padding: calc(var(--padding) / 2) calc(var(--padding) * 3);
   border: 0.2rem solid var(--color-vintage-red);
   border-radius: 2rem;
+  transition: all var(--transition-timing) ease-out;
+}
+
+.plan__button:hover {
+  scale: 1.1;
+  background-color: var(--color-vintage-red);
+  color: var(--color-white);
 }
 
 .section__locations {
@@ -393,6 +420,12 @@ body {
   border: 0.2rem solid var(--color-very-light-grey);
   border-radius: 2rem;
   position: relative;
+  transition: all var(--transition-timing) ease-in-out;
+  flex: 0 0 auto;
+}
+
+.testimonial__card:hover {
+  border: 0.2rem solid var(--color-vintage-red);
 }
 
 .card__header {
@@ -486,6 +519,11 @@ body {
   border-radius: 50%;
   border: 0.2rem solid var(--color-darker-red);
   cursor: pointer;
+  transition: all var(--transition-timing) ease-in-out;
+}
+
+.navigation__arrow:hover {
+  scale: 1.2;
 }
 
 .navigation__arrow-red {
@@ -538,6 +576,11 @@ body {
   border: 0;
   border-radius: 50%;
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.411);
+  transition: all var(--transition-timing) ease-in-out;
+}
+
+.footer__social:hover {
+  scale: 1.2;
 }
 
 .footer__social-img {
@@ -574,4 +617,11 @@ body {
   font-size: var(--font-size-16);
   color: var(--color-light-grey);
   line-height: 2.5;
+  transition: all var(--transition-timing) ease-in-out;
+}
+
+.link:hover,
+.link:active {
+  scale: 1.1;
+  color: var(--color-vintage-red);
 }/*# sourceMappingURL=style.css.map */
