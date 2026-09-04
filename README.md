@@ -69,8 +69,9 @@ LaslesVPN/
 ├── styles/
 │   ├── style.scss       # Source styles
 │   └── style.css        # Compiled stylesheet
-├── docs/
-│   └── screenshots/      # README preview images
+├── design/
+│   |── desktop/
+│   └── mobile/       # README preview images
 └── index.html            # Main page
 ```
 
@@ -103,9 +104,7 @@ sass styles/style.scss styles/style.css --watch
 
 Colors, spacing, and typography are all centralized as CSS custom properties at the top of `style.scss`, making it easy to re-theme the whole page by editing a handful of variables — no hunting through selectors.
 
-## 📄 License
 
-This project is currently unlicensed. If you plan to reuse or distribute it, consider adding a [LICENSE](https://choosealicense.com/) file.
 
 ## 🙋‍♂️ Author
 
