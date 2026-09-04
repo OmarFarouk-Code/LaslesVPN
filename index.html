@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/logo.png" rel="icon"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,16 +24,26 @@
           />
           <div class="header__heading">Lasles<strong>VPN</strong></div>
         </div>
-        <nav class="header__links">
-          <a class="header__link" href="#about">About</a>
-          <a class="header__link" href="#features">Features</a>
-          <a class="header__link" href="#pricing">Pricing</a>
-          <a class="header__link" href="#testimonials">Testimonials</a>
-          <a class="header__link" href="#help">Help</a>
-        </nav>
-        <div class="header__account">
-          <a class="header__signin" href="#">Sign In</a>
-          <button class="header__signup" href="#">Sign Up</button>
+
+        <label for="menu" class="burger-menu">
+          <div class="burger-menu__bar"></div>
+          <div class="burger-menu__bar"></div>
+          <div class="burger-menu__bar"></div>
+        </label>
+        <input id="menu" class="burger-menu__checkbox" type="checkbox" />
+
+        <div class="header__menu">
+          <nav class="header__links">
+            <a class="header__link" href="#about">About</a>
+            <a class="header__link" href="#features">Features</a>
+            <a class="header__link" href="#pricing">Pricing</a>
+            <a class="header__link" href="#testimonials">Testimonials</a>
+            <a class="header__link" href="#help">Help</a>
+          </nav>
+          <div class="header__account">
+            <a class="header__signin" href="#">Sign In</a>
+            <button class="header__signup" href="#">Sign Up</button>
+          </div>
         </div>
       </header>
       <section class="section section__hero" id="about">
@@ -337,6 +348,8 @@
         <div class="testimonial__navigation">
           <div class="slider__indictators">
             <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
             <span class="dot"></span>
           </div>
 

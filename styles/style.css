@@ -20,6 +20,7 @@
   --font-size-40: 4rem;
   --font-size-38: 3.8rem;
   --font-size-35: 3.5rem;
+  --font-size-30: 3rem;
   --font-size-25: 2.5rem;
   --font-size-22: 2.2rem;
   --font-size-20: 2rem;
@@ -87,6 +88,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-top: calc(var(--padding) * 2);
+  position: relative;
 }
 
 .header__logocontent {
@@ -105,6 +107,14 @@ body {
   font-weight: var(--font-weight-medium);
 }
 
+.header__menu {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20rem;
+}
+
 .header__links {
   display: flex;
   gap: calc(var(--padding) * 2);
@@ -115,12 +125,6 @@ body {
 .header__link {
   text-decoration: none;
   transition: all var(--transition-timing) ease-in-out;
-}
-
-.header__link:hover,
-.header__link:active {
-  scale: 1.2;
-  color: var(--color-vintage-red);
 }
 
 .header__account {
@@ -146,6 +150,16 @@ body {
   border-radius: 2rem;
 }
 
+/* Burger Menu */
+.burger-menu {
+  display: none;
+}
+
+.burger-menu__checkbox {
+  display: none;
+}
+
+/* Burger Menu End */
 .section__hero {
   gap: calc(var(--padding) * 4);
 }
@@ -190,10 +204,6 @@ body {
   box-shadow: 0rem 0.5rem 1.5rem var(--color-darker-red);
   margin-top: 4rem;
   transition: all var(--transition-timing) ease-in-out;
-}
-
-.section__button:hover {
-  scale: 1.1;
 }
 
 .section__display {
@@ -292,11 +302,6 @@ body {
   transition: all var(--transition-timing) ease-in-out;
 }
 
-.section__plan:hover {
-  scale: 1.1;
-  border: 0.2rem solid var(--color-vintage-red);
-}
-
 .plan__content {
   display: flex;
   flex-direction: column;
@@ -351,12 +356,6 @@ body {
   border: 0.2rem solid var(--color-vintage-red);
   border-radius: 2rem;
   transition: all var(--transition-timing) ease-out;
-}
-
-.plan__button:hover {
-  scale: 1.1;
-  background-color: var(--color-vintage-red);
-  color: var(--color-white);
 }
 
 .section__locations {
@@ -422,10 +421,6 @@ body {
   position: relative;
   transition: all var(--transition-timing) ease-in-out;
   flex: 0 0 auto;
-}
-
-.testimonial__card:hover {
-  border: 0.2rem solid var(--color-vintage-red);
 }
 
 .card__header {
@@ -496,6 +491,12 @@ body {
   height: 1.5rem;
   border-radius: 50%;
   background-color: var(--color-very-light-grey);
+  cursor: pointer;
+}
+
+.dot:nth-child(3),
+.dot:nth-child(4) {
+  opacity: 0;
 }
 
 .active {
@@ -522,10 +523,6 @@ body {
   transition: all var(--transition-timing) ease-in-out;
 }
 
-.navigation__arrow:hover {
-  scale: 1.2;
-}
-
 .navigation__arrow-red {
   background-color: var(--color-darker-red);
 }
@@ -547,8 +544,9 @@ body {
   justify-content: center;
   gap: calc(var(--padding) * 10);
   padding-top: calc(var(--padding) * 4);
+  padding-bottom: calc(var(--padding) * 4);
   width: 100vw;
-  height: 56rem;
+  margin-top: calc(var(--padding) * 6);
   background-color: var(--color-footer-background);
 }
 
@@ -577,10 +575,6 @@ body {
   border-radius: 50%;
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.411);
   transition: all var(--transition-timing) ease-in-out;
-}
-
-.footer__social:hover {
-  scale: 1.2;
 }
 
 .footer__social-img {
@@ -618,10 +612,229 @@ body {
   color: var(--color-light-grey);
   line-height: 2.5;
   transition: all var(--transition-timing) ease-in-out;
+  cursor: pointer;
 }
 
-.link:hover,
-.link:active {
-  scale: 1.1;
+@media (hover: hover) and (pointer: fine) {
+  .header__link:hover,
+  .header__link:active {
+    scale: 1.2;
+    color: var(--color-vintage-red);
+  }
+  .section__button:hover {
+    scale: 1.1;
+  }
+  .section__plan:hover {
+    scale: 1.1;
+    border: 0.2rem solid var(--color-vintage-red);
+  }
+  .plan__button:hover {
+    scale: 1.1;
+    background-color: var(--color-vintage-red);
+    color: var(--color-white);
+  }
+  .testimonial__card:hover {
+    border: 0.2rem solid var(--color-vintage-red);
+  }
+  .navigation__arrow:hover {
+    scale: 1.2;
+  }
+  .footer__social:hover {
+    scale: 1.2;
+  }
+  .link:hover,
+  .link:active {
+    scale: 1.1;
+    color: var(--color-vintage-red);
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .header__menu {
+    margin-left: 10rem;
+  }
+  .section__hero {
+    padding: 0 calc(var(--padding) * 2);
+  }
+  .section__sponsor {
+    width: 15rem;
+  }
+  .dot:nth-child(3) {
+    opacity: 1;
+  }
+  .footer {
+    padding-left: calc(var(--padding) * 2);
+    padding-right: calc(var(--padding) * 2);
+    gap: calc(var(--padding) * 6);
+  }
+  .footer__links {
+    gap: calc(var(--padding) * 2);
+  }
+}
+@media (max-width: 767px) {
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .burger-menu__bar {
+    height: 0.3rem;
+    width: 4.375rem;
+    background-color: var(--color-dark-blue);
+    transition: var(--transition-timing) ease-in-out;
+  }
+  .header__menu {
+    position: absolute;
+    top: -400px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    flex-direction: column;
+    padding: calc(var(--padding) * 2);
+    gap: calc(var(--padding) * 2);
+    margin-left: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: top var(--transition-timing) ease-in-out;
+    z-index: 99;
+  }
+  .header__links,
+  .header__account {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: calc(var(--padding) * 2);
+  }
+  .header__signup {
+    width: 100%;
+  }
+  .header:has(.burger-menu__checkbox:checked) .header__menu {
+    top: 100%;
+  }
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(1) {
+    transform: translateY(7px) rotate(40deg);
+  }
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-40deg);
+  }
+  .section {
+    flex-direction: column;
+  }
+  .section__hero {
+    flex-direction: column-reverse;
+  }
+  .section__button {
+    width: 100%;
+  }
+  .section__stats {
+    padding: var(--padding);
+    gap: calc(var(--padding) * 2);
+    align-items: center;
+  }
+  .section__stat {
+    gap: calc(var(--padding) * 2);
+    width: 24rem;
+    justify-content: flex-start;
+  }
+  .stat__icon img {
+    width: 10rem;
+  }
+  .stat__number {
+    font-size: var(--font-size-30);
+  }
+  .stat__description {
+    font-size: var(--font-size-20);
+  }
+  .section__features {
+    gap: calc(var(--padding) * 2);
+    align-items: center;
+  }
+  .section__feature {
+    font-size: var(--font-size-16);
+    width: 25rem;
+  }
+  .section__content {
+    text-align: center;
+  }
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+  }
+  .section__plans {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    -moz-column-gap: var(--padding);
+         column-gap: var(--padding);
+    padding: calc(var(--padding) * 2);
+  }
+  .section__plan:nth-child(3) {
+    grid-column: 1/-1;
+    place-self: center;
+  }
+  .testimonial__navigation {
+    padding: calc(var(--padding) * 2);
+  }
+  .dot:nth-child(3),
+  .dot:nth-child(4) {
+    opacity: 1;
+  }
+  .section__sponsors {
+    flex-direction: column;
+  }
+  .section__subscribe {
+    padding: var(--padding);
+  }
+  .section__subscribe .section__display {
+    width: 100%;
+  }
+  .footer {
+    flex-direction: column;
+    gap: calc(var(--padding) * 4);
+    padding-top: calc(var(--padding) * 2);
+  }
+  .footer__content {
+    align-items: center;
+  }
+  .footer__links {
+    gap: calc(var(--padding) * 2);
+    justify-content: center;
+  }
+}
+.section__button:active,
+.plan__button:active,
+.navigation__arrow:active,
+.dot:active,
+.header__signup:active {
+  transform: scale(0.95);
+  box-shadow: 0rem 0.2rem 1rem var(--color-vintage-red);
+  transition: all 0.1s ease-out;
+}
+
+.header__signin:active {
+  transition: all 0.1s ease-out;
+  transform: scale(0.95);
+}
+
+.header__link:active,
+.link:active,
+.header__link:active,
+.footer__social:active {
+  transform: scale(0.95);
   color: var(--color-vintage-red);
+  transition: all 0.1s ease-out;
+}
+
+.section__plan:active,
+.testimonial__card:active {
+  border-color: var(--color-vintage-red);
+  background-color: #fff9f9;
+  transform: scale(0.98);
+  transition: all 0.15s ease-out;
 }/*# sourceMappingURL=style.css.map */
