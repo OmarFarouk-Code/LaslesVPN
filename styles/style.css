@@ -69,6 +69,13 @@ body {
   font-family: var(--font-family-rubik);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--padding) * 6); /* 12rem gap between sections */
+  width: 100%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -545,7 +552,7 @@ body {
   gap: calc(var(--padding) * 10);
   padding-top: calc(var(--padding) * 4);
   padding-bottom: calc(var(--padding) * 4);
-  width: 100vw;
+  width: 100%;
   margin-top: calc(var(--padding) * 6);
   background-color: var(--color-footer-background);
 }

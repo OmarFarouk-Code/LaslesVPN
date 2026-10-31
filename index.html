@@ -3,25 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="assets/logo.png" rel="icon"/>
+    <link href="assets/logo.png" rel="icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
     <link href="styles/style.css" rel="stylesheet" />
     <title>LaslesVPN</title>
   </head>
   <body>
-    <article class="container">
-      <header class="header">
+    <div class="container">
+      <!-- 1. NAVBAR -->
+      <header class="header" data-testid="navbar">
         <div class="header__logocontent">
-          <img
-            class="header__logo"
-            src="assets/logo.png"
-            alt="LaslesVPN logo"
-          />
+          <img class="header__logo" src="assets/logo.png" alt="LaslesVPN logo" />
           <div class="header__heading">Lasles<strong>VPN</strong></div>
         </div>
 
@@ -42,353 +36,295 @@
           </nav>
           <div class="header__account">
             <a class="header__signin" href="#">Sign In</a>
-            <button class="header__signup" href="#">Sign Up</button>
+            <button class="header__signup">Sign Up</button>
           </div>
         </div>
       </header>
-      <section class="section section__hero" id="about">
-        <div class="section__content">
-          <h1 class="section__heading">
-            Want anything to be easy with <span>LaslesVPN.</span>
-          </h1>
-          <p class="section__description">
-            Provide a network for all your needs with ease and fun using
-            <span>LaslesVPN</span> discover interesting features from us.
-          </p>
-          <button class="section__button">Get Started</button>
-        </div>
-        <div class="section__display">
-          <img class="section__img" src="assets/hero-illustration.svg" alt="" />
-        </div>
-      </section>
-      <section class="section section__stats">
-        <div class="section__stat">
-          <div class="stat__icon">
-            <img src="assets/user-icon.svg" alt="user icon" />
-          </div>
-          <div class="stat__specs">
-            <div class="stat__number">90+</div>
-            <div class="stat__description">Users</div>
-          </div>
-        </div>
 
-        <div class="section__stat">
-          <div class="stat__icon">
-            <img src="assets/location-icon.svg" alt="location icon" />
+      <main>
+        <!-- 2. HERO SECTION -->
+        <section class="section section__hero" id="about" data-testid="hero">
+          <div class="section__content">
+            <h1 class="section__heading">Want anything to be easy with <span>LaslesVPN.</span></h1>
+            <p class="section__description">
+              Provide a network for all your needs with ease and fun using
+              <span>LaslesVPN</span> discover interesting features from us.
+            </p>
+            <button class="section__button">Get Started</button>
           </div>
-          <div class="stat__specs">
-            <div class="stat__number">30+</div>
-            <div class="stat__description">Locations</div>
+          <div class="section__display">
+            <img class="section__img" src="assets/hero-illustration.svg" alt="LaslesVPN Hero Illustration" />
           </div>
-        </div>
+        </section>
 
-        <div class="section__stat">
-          <div class="stat__icon">
-            <img src="assets/user-icon.svg" alt="user icon" />
-          </div>
-          <div class="stat__specs">
-            <div class="stat__number">50+</div>
-            <div class="stat__description">Servers</div>
-          </div>
-        </div>
-      </section>
-      <section class="section section__features" id="features">
-        <div class="section__display">
-          <img
-            class="section__img"
-            src="assets/features-illustration.svg"
-            alt=""
-          />
-        </div>
-        <div class="section__content">
-          <h2 class="section__heading2">
-            We Provide Many<br />
-            Features You Can Use
-          </h2>
-          <p class="section__description">
-            You can explore the features that we provide with fun and have their
-            own functions each feature.
-          </p>
-          <ul class="features__list">
-            <li class="section__feature">Powerfull online protection.</li>
-            <li class="section__feature">Internet without borders.</li>
-            <li class="section__feature">Supercharged VPN</li>
-            <li class="section__feature">No specific time limits.</li>
-          </ul>
-        </div>
-      </section>
-      <section class="section section__pricing" id="pricing">
-        <div class="section__content">
-          <h2 class="section__heading2">Choose Your Plan</h2>
-          <p class="section__description">
-            Let's choose the package that is best for you and explore it happily
-            and <br />cheerfully.
-          </p>
-        </div>
-        <div class="section__plans">
-          <div class="section__plan">
-            <div class="plan__content">
-              <img class="plan__icon" src="assets/Free.svg" alt="" />
-              <h3 class="plan__heading">Free Plan</h3>
-              <ul class="plan__features">
-                <li class="plan__feature">Unlimited Bandwitch</li>
-                <li class="plan__feature">Encrypted Connection</li>
-                <li class="plan__feature">No Traffic Logs</li>
-                <li class="plan__feature">Works on All Devices</li>
-              </ul>
+        <!-- 3. STATS SECTION -->
+        <section class="section section__stats" data-testid="stats">
+          <div class="section__stat">
+            <div class="stat__icon">
+              <img src="assets/user-icon.svg" alt="user icon" />
             </div>
-            <div class="plan__pricing">
-              <div class="plan__price"><span>Free</span></div>
-              <button class="plan__button">Select</button>
+            <div class="stat__specs">
+              <div class="stat__number">90+</div>
+              <div class="stat__description">Users</div>
             </div>
           </div>
 
-          <div class="section__plan">
-            <div class="plan__content">
-              <img class="plan__icon" src="assets/Free.svg" alt="" />
-              <h3 class="plan__heading">Standard Plan</h3>
-              <ul class="plan__features">
-                <li class="plan__feature">Unlimited Bandwitch</li>
-                <li class="plan__feature">Encrypted Connection</li>
-                <li class="plan__feature">Yes Traffic Logs</li>
-                <li class="plan__feature">Works on All Devices</li>
-                <li class="plan__feature">Connect Anyware</li>
-              </ul>
+          <div class="section__stat">
+            <div class="stat__icon">
+              <img src="assets/location-icon.svg" alt="location icon" />
             </div>
-            <div class="plan__pricing">
-              <div class="plan__price"><span>$9</span> / mo</div>
-              <button class="plan__button">Select</button>
+            <div class="stat__specs">
+              <div class="stat__number">30+</div>
+              <div class="stat__description">Locations</div>
             </div>
           </div>
 
-          <div class="section__plan">
-            <div class="plan__content">
-              <img class="plan__icon" src="assets/Free.svg" alt="" />
-              <h3 class="plan__heading">Premium Plan</h3>
-              <ul class="plan__features">
-                <li class="plan__feature">Unlimited Bandwitch</li>
-                <li class="plan__feature">Encrypted Connection</li>
-                <li class="plan__feature">Yes Traffic Logs</li>
-                <li class="plan__feature">Works on All Devices</li>
-                <li class="plan__feature">Connect Anyware</li>
-                <li class="plan__feature">Get New Features</li>
-              </ul>
+          <div class="section__stat">
+            <div class="stat__icon">
+              <img src="assets/user-icon.svg" alt="server icon" />
             </div>
-            <div class="plan__pricing">
-              <div class="plan__price"><span>$12</span> / mo</div>
-              <button class="plan__button">Select</button>
+            <div class="stat__specs">
+              <div class="stat__number">50+</div>
+              <div class="stat__description">Servers</div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section section__locations">
-        <div class="section__content">
-          <h2 class="section__heading2">
-            Huge Global Network of <br />Fast VPN
-          </h2>
-          <p class="section__description">
-            See <strong>LaslesVPN</strong> everywhere to make it easier for you
-            when you move <br />locations.
-          </p>
-        </div>
-        <div class="section__display">
-          <img
-            class="section__img"
-            src="assets/continents.svg"
-            alt="global map"
-          />
-          <div class="section__sponsors">
-            <img
-              class="section__sponsor"
-              src="assets/netflix.svg"
-              alt="netflix"
-            />
-            <img
-              class="section__sponsor"
-              src="assets/reddit.svg"
-              alt="reddit"
-            />
-            <img
-              class="section__sponsor"
-              src="assets/amazon.svg"
-              alt="amazon"
-            />
-            <img
-              class="section__sponsor"
-              src="assets/discord.svg"
-              alt="discord"
-            />
-            <img
-              class="section__sponsor"
-              src="assets/spotify.svg"
-              alt="spotify"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="section section__testimonials" id="testimonials">
-        <div class="section__content">
-          <h2 class="section__heading2">
-            Trusted by Thousands of <br />Happy Customer
-          </h2>
-          <p class="section__description">
-            These are the stories of our customers who have joined us with great
-            <br />pleasure when using this crazy feature.
-          </p>
-        </div>
+        </section>
 
-        <div class="testimonial__cards" id="cards-container">
-          <div class="testimonial__card">
-            <div class="card__header">
-              <img
-                class="card__avatar"
-                src="assets/avatar1.svg"
-                alt="avatar picture"
-              />
-              <div class="card__user">
-                <h3 class="card__name">Viezh Robert</h3>
-                <p class="card__location">Warsaw, Poland</p>
+        <!-- 4. FEATURES SECTION -->
+        <section class="section section__features" id="features" data-testid="features">
+          <div class="section__display">
+            <img class="section__img" src="assets/features-illustration.svg" alt="Features illustration" />
+          </div>
+          <div class="section__content">
+            <h2 class="section__heading2">
+              We Provide Many<br />
+              Features You Can Use
+            </h2>
+            <p class="section__description">You can explore the features that we provide with fun and have their own functions each feature.</p>
+            <ul class="features__list">
+              <li class="section__feature">Powerfull online protection.</li>
+              <li class="section__feature">Internet without borders.</li>
+              <li class="section__feature">Supercharged VPN</li>
+              <li class="section__feature">No specific time limits.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 5. PRICING SECTION -->
+        <section class="section section__pricing" id="pricing" data-testid="pricing">
+          <div class="section__content">
+            <h2 class="section__heading2">Choose Your Plan</h2>
+            <p class="section__description">Let's choose the package that is best for you and explore it happily and <br />cheerfully.</p>
+          </div>
+          <div class="section__plans">
+            <div class="section__plan" data-testid="plan">
+              <div class="plan__content">
+                <img class="plan__icon" src="assets/Free.svg" alt="Free plan icon" />
+                <h3 class="plan__heading">Free Plan</h3>
+                <ul class="plan__features">
+                  <li class="plan__feature">Unlimited Bandwitch</li>
+                  <li class="plan__feature">Encrypted Connection</li>
+                  <li class="plan__feature">No Traffic Logs</li>
+                  <li class="plan__feature">Works on All Devices</li>
+                </ul>
+              </div>
+              <div class="plan__pricing">
+                <div class="plan__price"><span>Free</span></div>
+                <button class="plan__button">Select</button>
               </div>
             </div>
 
-            <div class="card__rating">
-              <div class="rating">4.5</div>
-              <img class="star-img" src="assets/star.png" alt="star picture" />
-            </div>
-
-            <div class="card__body">
-              <p class="card__description">
-                “Wow... I am very happy to use this VPN, it turned out to be
-                more than my expectations and so far there have been no
-                problems. LaslesVPN always the best”.
-              </p>
-            </div>
-          </div>
-
-          <div class="testimonial__card">
-            <div class="card__header">
-              <img
-                class="card__avatar"
-                src="assets/avatar2.png"
-                alt="avatar picture"
-              />
-              <div class="card__user">
-                <h3 class="card__name">Yessica Christy</h3>
-                <p class="card__location">Shanxi, China</p>
+            <div class="section__plan" data-testid="plan">
+              <div class="plan__content">
+                <img class="plan__icon" src="assets/Free.svg" alt="Standard plan icon" />
+                <h3 class="plan__heading">Standard Plan</h3>
+                <ul class="plan__features">
+                  <li class="plan__feature">Unlimited Bandwitch</li>
+                  <li class="plan__feature">Encrypted Connection</li>
+                  <li class="plan__feature">Yes Traffic Logs</li>
+                  <li class="plan__feature">Works on All Devices</li>
+                  <li class="plan__feature">Connect Anyware</li>
+                </ul>
+              </div>
+              <div class="plan__pricing">
+                <div class="plan__price"><span>$9</span> / mo</div>
+                <button class="plan__button">Select</button>
               </div>
             </div>
 
-            <div class="card__rating">
-              <div class="rating">4.5</div>
-              <img class="star-img" src="assets/star.png" alt="star picture" />
-            </div>
-
-            <div class="card__body">
-              <p class="card__description">
-                “I like it because I like to travel far and still can connect
-                with high speed.”.
-              </p>
+            <div class="section__plan" data-testid="plan">
+              <div class="plan__content">
+                <img class="plan__icon" src="assets/Free.svg" alt="Premium plan icon" />
+                <h3 class="plan__heading">Premium Plan</h3>
+                <ul class="plan__features">
+                  <li class="plan__feature">Unlimited Bandwitch</li>
+                  <li class="plan__feature">Encrypted Connection</li>
+                  <li class="plan__feature">Yes Traffic Logs</li>
+                  <li class="plan__feature">Works on All Devices</li>
+                  <li class="plan__feature">Connect Anyware</li>
+                  <li class="plan__feature">Get New Features</li>
+                </ul>
+              </div>
+              <div class="plan__pricing">
+                <div class="plan__price"><span>$12</span> / mo</div>
+                <button class="plan__button">Select</button>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div class="testimonial__card">
-            <div class="card__header">
-              <img
-                class="card__avatar"
-                src="assets/avatar3.png"
-                alt="avatar picture"
-              />
-              <div class="card__user">
-                <h3 class="card__name">Kim Young Jou</h3>
-                <p class="card__location">Seoul, South Korea</p>
+        <!-- 6. GLOBAL NETWORK (LOCATIONS) SECTION -->
+        <section class="section section__locations">
+          <div class="section__content">
+            <h2 class="section__heading2">Huge Global Network of <br />Fast VPN</h2>
+            <p class="section__description">See <strong>LaslesVPN</strong> everywhere to make it easier for you when you move <br />locations.</p>
+          </div>
+          <div class="section__display">
+            <img class="section__img" src="assets/continents.svg" alt="global map" />
+            <div class="section__sponsors">
+              <img class="section__sponsor" src="assets/netflix.svg" alt="netflix" />
+              <img class="section__sponsor" src="assets/reddit.svg" alt="reddit" />
+              <img class="section__sponsor" src="assets/amazon.svg" alt="amazon" />
+              <img class="section__sponsor" src="assets/discord.svg" alt="discord" />
+              <img class="section__sponsor" src="assets/spotify.svg" alt="spotify" />
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. TESTIMONIALS SECTION -->
+        <section class="section section__testimonials" id="testimonials" data-testid="testimonials">
+          <div class="section__content">
+            <h2 class="section__heading2">Trusted by Thousands of <br />Happy Customer</h2>
+            <p class="section__description">
+              These are the stories of our customers who have joined us with great
+              <br />pleasure when using this crazy feature.
+            </p>
+          </div>
+
+          <div class="testimonial__cards" id="cards-container">
+            <div class="testimonial__card" data-testid="testimonial">
+              <div class="card__header">
+                <img class="card__avatar" src="assets/avatar1.svg" alt="Viezh Robert avatar" />
+                <div class="card__user">
+                  <h3 class="card__name">Viezh Robert</h3>
+                  <p class="card__location">Warsaw, Poland</p>
+                </div>
+              </div>
+
+              <div class="card__rating">
+                <div class="rating">4.5</div>
+                <img class="star-img" src="assets/star.png" alt="star icon" />
+              </div>
+
+              <div class="card__body">
+                <p class="card__description">
+                  “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems.
+                  LaslesVPN always the best”.
+                </p>
               </div>
             </div>
 
-            <div class="card__rating">
-              <div class="rating">4.5</div>
-              <img class="star-img" src="assets/star.png" alt="star picture" />
-            </div>
+            <div class="testimonial__card" data-testid="testimonial">
+              <div class="card__header">
+                <img class="card__avatar" src="assets/avatar2.png" alt="Yessica Christy avatar" />
+                <div class="card__user">
+                  <h3 class="card__name">Yessica Christy</h3>
+                  <p class="card__location">Shanxi, China</p>
+                </div>
+              </div>
 
-            <div class="card__body">
-              <p class="card__description">
-                “This is very unusual for my business that currently requires a
-                virtual private network that has high security.”.
-              </p>
-            </div>
-          </div>
+              <div class="card__rating">
+                <div class="rating">4.5</div>
+                <img class="star-img" src="assets/star.png" alt="star icon" />
+              </div>
 
-          <div class="testimonial__card">
-            <div class="card__header">
-              <img
-                class="card__avatar"
-                src="assets/avatar3.png"
-                alt="avatar picture"
-              />
-              <div class="card__user">
-                <h3 class="card__name">Liam Henderson</h3>
-                <p class="card__location">Melbourne, Australia</p>
+              <div class="card__body">
+                <p class="card__description">“I like it because I like to travel far and still can connect with high speed.”.</p>
               </div>
             </div>
 
-            <div class="card__rating">
-              <div class="rating">4.8</div>
-              <img class="star-img" src="assets/star.png" alt="star picture" />
+            <div class="testimonial__card" data-testid="testimonial">
+              <div class="card__header">
+                <img class="card__avatar" src="assets/avatar3.png" alt="Kim Young Jou avatar" />
+                <div class="card__user">
+                  <h3 class="card__name">Kim Young Jou</h3>
+                  <p class="card__location">Seoul, South Korea</p>
+                </div>
+              </div>
+
+              <div class="card__rating">
+                <div class="rating">4.5</div>
+                <img class="star-img" src="assets/star.png" alt="star icon" />
+              </div>
+
+              <div class="card__body">
+                <p class="card__description">
+                  “This is very unusual for my business that currently requires a virtual private network that has high security.”.
+                </p>
+              </div>
             </div>
 
-            <div class="card__body">
-              <p class="card__description">
-                “Streaming global content without buffering used to be a hassle
-                until I switched. The setup took less than two minutes, and
-                latency stays surprisingly low.”
-              </p>
+            <div class="testimonial__card" data-testid="testimonial">
+              <div class="card__header">
+                <img class="card__avatar" src="assets/avatar3.png" alt="Liam Henderson avatar" />
+                <div class="card__user">
+                  <h3 class="card__name">Liam Henderson</h3>
+                  <p class="card__location">Melbourne, Australia</p>
+                </div>
+              </div>
+
+              <div class="card__rating">
+                <div class="rating">4.8</div>
+                <img class="star-img" src="assets/star.png" alt="star icon" />
+              </div>
+
+              <div class="card__body">
+                <p class="card__description">
+                  “Streaming global content without buffering used to be a hassle until I switched. The setup took less than two minutes, and latency
+                  stays surprisingly low.”
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="testimonial__navigation">
-          <div class="slider__indictators">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <div class="testimonial__navigation">
+            <div class="slider__indictators">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <div class="navigation__arrows">
+              <button class="navigation__arrow" id="prev-btn" aria-label="Previous testimonial">
+                <img class="arrow-img" src="assets/arrow-backward.svg" alt="previous" />
+              </button>
+              <button class="navigation__arrow navigation__arrow-red" id="next-btn" aria-label="Next testimonial">
+                <img class="arrow-img" src="assets/arrow-forward.svg" alt="next" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. SUBSCRIBE SECTION -->
+        <section class="section section__subscribe" data-testid="subscribe">
+          <div class="section__content">
+            <h2 class="section__heading2">Subscribe Now for<br />Get Special Features!</h2>
+            <p class="section__description">Let's subscribe with us and find the fun.</p>
           </div>
 
-          <div class="navigation__arrows">
-            <button class="navigation__arrow" id="prev-btn">
-              <img class="arrow-img" src="assets/arrow-backward.svg" />
-            </button>
-            <button
-              class="navigation__arrow navigation__arrow-red"
-              id="next-btn"
-            >
-              <img class="arrow-img" src="assets/arrow-forward.svg" />
-            </button>
+          <div class="section__display">
+            <button class="section__button">Subscribe Now</button>
           </div>
-        </div>
-      </section>
-      <section class="section section__subscribe">
-        <div class="section__content">
-          <h2 class="section__heading2">
-            Subscribe Now for<br />Get Special Features!
-          </h2>
-          <p class="section__description">
-            Let's subscribe with us and find the fun.
-          </p>
-        </div>
+        </section>
+      </main>
+    </div>
 
-        <div class="section__display">
-          <button class="section__button">Subscribe Now</button>
-        </div>
-      </section>
-    </article>
-    <footer class="footer" id="help">
+    <!-- 9. FOOTER -->
+    <footer class="footer" id="help" data-testid="footer">
       <div class="footer__content">
         <div class="header__logocontent">
-          <img
-            class="header__logo"
-            src="assets/logo.png"
-            alt="LaslesVPN logo"
-          />
+          <img class="header__logo" src="assets/logo.png" alt="LaslesVPN logo" />
           <div class="header__heading">Lasles<strong>VPN</strong></div>
         </div>
         <p class="footer__description">
@@ -396,26 +332,14 @@
           has unique features and has high security.
         </p>
         <div class="footer__socials">
-          <a class="footer__social" href="#">
-            <img
-              class="footer__social-img"
-              src="assets/facebook.svg"
-              alt="facebook"
-            />
+          <a class="footer__social" href="#" aria-label="Facebook">
+            <img class="footer__social-img" src="assets/facebook.svg" alt="facebook" />
           </a>
-          <a class="footer__social" href="#">
-            <img
-              class="footer__social-img"
-              src="assets/twitter.svg"
-              alt="twitter"
-            />
+          <a class="footer__social" href="#" aria-label="Twitter">
+            <img class="footer__social-img" src="assets/twitter.svg" alt="twitter" />
           </a>
-          <a class="footer__social" href="#">
-            <img
-              class="footer__social-img"
-              src="assets/instagram.svg"
-              alt="instagram"
-            />
+          <a class="footer__social" href="#" aria-label="Instagram">
+            <img class="footer__social-img" src="assets/instagram.svg" alt="instagram" />
           </a>
         </div>
         <p class="footer__copyright">©2026Lasles<strong>VPN</strong></p>
@@ -454,14 +378,13 @@
         </div>
       </div>
     </footer>
+
     <script>
-      // 1. Grab all necessary elements
       const cardsContainer = document.getElementById("cards-container");
       const prevBtn = document.getElementById("prev-btn");
       const nextBtn = document.getElementById("next-btn");
-      const dots = document.querySelectorAll(".dot"); // Grabs all 4 dots
+      const dots = document.querySelectorAll(".dot");
 
-      // 2. Helper function to calculate the exact width of a card + gap
       const getScrollAmount = () => {
         const singleCard = document.querySelector(".testimonial__card");
         const containerStyle = window.getComputedStyle(cardsContainer);
@@ -469,7 +392,6 @@
         return singleCard.offsetWidth + gap;
       };
 
-      // 3. Arrow Navigation Logic
       const scrollCards = (direction) => {
         const scrollAmount = getScrollAmount();
         if (direction === "next") {
@@ -482,31 +404,18 @@
       nextBtn.addEventListener("click", () => scrollCards("next"));
       prevBtn.addEventListener("click", () => scrollCards("prev"));
 
-      // 4. Update the active dot when the container scrolls
       cardsContainer.addEventListener("scroll", () => {
         const scrollAmount = getScrollAmount();
-
-        // Divide current scroll position by card width to get the active index
-        // Math.round ensures it snaps to the nearest whole number (0, 1, 2, or 3)
-        const currentIndex = Math.round(
-          cardsContainer.scrollLeft / scrollAmount,
-        );
-
-        // Remove the 'active' class from all dots
+        const currentIndex = Math.round(cardsContainer.scrollLeft / scrollAmount);
         dots.forEach((dot) => dot.classList.remove("active"));
-
-        // Add the 'active' class to the correct dot
         if (dots[currentIndex]) {
           dots[currentIndex].classList.add("active");
         }
       });
 
-      // 5. BONUS: Make the dots clickable!
       dots.forEach((dot, index) => {
         dot.addEventListener("click", () => {
           const scrollAmount = getScrollAmount();
-
-          // Scroll to the exact position of the clicked dot's index
           cardsContainer.scrollTo({
             left: scrollAmount * index,
             behavior: "smooth",
